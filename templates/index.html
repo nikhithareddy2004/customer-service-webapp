@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Service</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Service Form</h1>
+        <form method="post">
+            <label>Name:</label>
+            <input type="text" name="name" required><br>
+            <label>Email:</label>
+            <input type="email" name="email" required><br>
+            <label>Query:</label>
+            <textarea name="query" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+        {% if message %}
+            <p class="thankyou">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
